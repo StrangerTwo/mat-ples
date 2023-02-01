@@ -4,11 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
+    <title>Maturitní ples</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
   <body>
     <div id="app">
-      <div id="programmer"></div>
+      <div id="programmer">
+        <div class="nav">
+          <div class="menu">
+            <i class="fas fa-circle-play"></i>
+            <i class="fas fa-circle-stop"></i>
+            <i class="fas fa-circle-exclamation"></i>
+          </div>
+          <i class="fas fa-circle-xmark"></i>
+        </div>
+        <div class="flex grow items-center">
+          <div class="teleportable">
+            <code class="text-white px-3">
+            </code>
+          </div>
+        </div>
+      </div>
       <div id="battleground"></div>
       <div id="graphic"></div>
     </div>
