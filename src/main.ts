@@ -1,9 +1,11 @@
+import initProps from './graphic';
 import useLayout from './layout'
 import write, { clearCode, setSpeed } from './programmer';
 import sleep from './sleep';
 import './style.css'
 import { teleportProgrammer } from './teleport';
 
+initProps();
 const {setProgrammerWidth, setGraphicWidth} = useLayout();
 
 setGraphicWidth("15vw");

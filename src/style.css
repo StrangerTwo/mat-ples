@@ -96,8 +96,6 @@ button:focus-visible {
 #programmer {
   width: var(--programmer-width);
   background-color: #1b1b1b;
-  display: flex;
-  flex-direction: column;
 }
 
 #programmer .nav {
@@ -133,6 +131,12 @@ button:focus-visible {
 #programmer, #graphic {
   transition: width 300ms ease-out;
   min-width: max-content;
+  display: flex;
+  flex-direction: column;
+}
+
+#canvas {
+  width: 100%;
 }
 
 code {

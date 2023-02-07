@@ -1,6 +1,7 @@
+const root = document.querySelector<HTMLElement>(":root");
+if (!root) throw new Error("xd");
+
 const useLayout = () => {
-    const root = document.querySelector<HTMLElement>(":root");
-    if (!root) throw new Error("xd");
 
     const setProgrammerWidth = (width: string) => {
         root.style.setProperty("--programmer-width", width)
