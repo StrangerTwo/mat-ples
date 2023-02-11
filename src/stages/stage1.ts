@@ -28,6 +28,8 @@ const stage1 = async () => {
     await sleep(1500);
 
     await initBattlefield();
+
+    setProgrammerWidth("35vw");
 }
 
 export default stage1;

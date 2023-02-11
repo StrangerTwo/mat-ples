@@ -7,7 +7,7 @@ import { clearTeleport, teleportGraphic, teleportProgrammer } from "../teleport"
 const {setProgrammerWidth, setGraphicWidth} = useLayout();
 
 const stage0 = async () => {
-    setGraphicWidth("15vw");
+    setGraphicWidth("0vw");
     setProgrammerWidth("35vw");
     setSpeed(20);
 
