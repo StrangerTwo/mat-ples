@@ -1,6 +1,6 @@
 import initBattlefield from "../battlefield";
 import useLayout, { shake } from "../layout";
-import write, { clearCode } from "../programmer";
+import write, { clearCode, setSpeed } from "../programmer";
 import sleep from "../sleep";
 import { clearTeleport, teleportProgrammer } from "../teleport";
 
@@ -9,6 +9,7 @@ const {setProgrammerWidth, setGraphicWidth} = useLayout();
 const stage1 = async () => {
     setGraphicWidth("12vw")
     setProgrammerWidth("35vw");
+    setSpeed(40);
 
     await write({v: "this", c: "this"}, {v: "."}, {v: "world", c: "prop"}, {v: "."}, {v: "init", c: "method"}, {v: "("}, {v: "{theme", c: "prop"}, {v: ": "}, {v: "BATTLEFIELD", c: "const"}, {v: "}", c: "prop"}, {v: ");"})
     await sleep(500);

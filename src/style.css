@@ -203,6 +203,9 @@ code span.const {
 code span.str {
   color: #ffbb29;
 }
+code span.key {
+  color: #569cd6;
+}
 
 .teleportable.teleporting {
   transform-origin: center center;
