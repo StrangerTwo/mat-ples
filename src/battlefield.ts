@@ -1,7 +1,8 @@
 import groundSvg from "./images/ground.svg?raw"
 import groundSkySvg from "./images/ground_sky.svg?raw"
 import groundDetailSkySvg from "./images/groundx_sky.svg?raw"
-import battlefieldSvg from "./images/battlefield.svg?raw"
+import groundTentSvg from "./images/ground_tent.svg?raw"
+import groundTentCloudSvg from "./images/ground_tent_cloud.svg?raw"
 import sleep from "./sleep";
 
 const battlefieldEl = document.getElementById("battlefield");
@@ -27,7 +28,11 @@ const initBattlefield = async () => {
     await sleep(300);
 
     remove();
-    battlefieldEl.innerHTML += battlefieldSvg;
+    battlefieldEl.innerHTML += groundTentSvg;
+    await sleep(300);
+
+    remove();
+    battlefieldEl.innerHTML += groundTentCloudSvg;
     await sleep(300);
 }
 
