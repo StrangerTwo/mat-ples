@@ -3,7 +3,7 @@ import write, { clearCode } from "../programmer";
 import sleep from "../sleep";
 import { clearTeleport, teleportProgrammer } from "../teleport";
 
-const {setProgrammerWidth, setGraphicWidth} = useLayout();
+const {setProgrammerWidth} = useLayout();
 
 const stage2 = async () => {
     setProgrammerWidth("35vw");
