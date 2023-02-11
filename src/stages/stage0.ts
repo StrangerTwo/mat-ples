@@ -25,7 +25,7 @@ const stage0 = async () => {
     await write({v: "String ", c: "class"}, {v: "celeJmeno", c: "prop"}, {v: " = "}, {v: "jmeno", c: "prop"}, {v: ' + '}, {v: '" "', c: "str"}, {v: ' + '}, {v: 'prijmeni', c: "prop"}, {v: ";"});
     await write()
 
-    await write({v: "System", c: "class"}, {v: ".out.println"}, {v: '('}, {v: '"Ahoj "', c: "str"}, {v: " + "}, {v: "celeJmeno", c: "prop"}, {v: " + "}, {v: '" !"', c: "str"}, {v: ");"});
+    await write({v: "System", c: "class"}, {v: ".out."}, {v: "println", c: "prop"}, {v: '('}, {v: '"Ahoj "', c: "str"}, {v: " + "}, {v: "celeJmeno", c: "prop"}, {v: " + "}, {v: '" !"', c: "str"}, {v: ");"});
 
     await sleep(2000);
 

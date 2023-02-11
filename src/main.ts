@@ -4,12 +4,21 @@ import stage1 from './stages/stage1';
 import { setStatusMessage } from './status';
 import './style.css'
 
-setStatusMessage("STAGE 0");
-await stage0();
+async function play() {
+    setStatusMessage("STAGE 0");
+    await stage0();
 
 
-setStatusMessage("");
-await sleep(1000);
+    setStatusMessage("");
+    await sleep(1000);
 
-setStatusMessage("STAGE 1");
-await stage1();
+    setStatusMessage("STAGE 1");
+    await stage1();
+}
+
+document.getElementById("play")?.addEventListener('click', (e) => {
+    e.preventDefault();
+    (e.target as any).remove();
+
+    play();
+})
