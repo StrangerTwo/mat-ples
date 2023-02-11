@@ -11,6 +11,8 @@ const stage0 = async () => {
     setProgrammerWidth("35vw");
     setSpeed(20);
 
+    await sleep(1000);
+
     await write({v: "Scanner ", c: "class"}, {v: "scanner", c: "prop"}, {v: " = "}, {v: "new "}, {v: "Scanner", c: "class"}, {v: "("}, {v: "System", c: "class"}, {v: "."}, {v: "in", c: "prop"}, {v: ");"});
     await write()
 

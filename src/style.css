@@ -84,8 +84,8 @@ button:focus-visible {
 }
 
 :root {
-  --programmer-width: 30vw;
-  --graphic-width: 30vw;
+  --programmer-width: 0vw;
+  --graphic-width: 0vw;
 }
 
 #battlefield {
@@ -139,6 +139,7 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow: hidden;
 }
 
 #canvas svg {
