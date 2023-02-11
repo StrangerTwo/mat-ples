@@ -98,30 +98,34 @@ button:focus-visible {
   background-color: #1b1b1b;
 }
 
-#programmer .nav {
+.nav {
   display: flex;
   padding: 10px;
   justify-content: space-between;
   align-items: center;
 }
 
-#programmer .nav .menu {
+.nav .menu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 10px;
 }
-#programmer .nav i {
+.nav i {
   color: #E70033;
   font-size:  40px;
 }
-#programmer .nav .menu i:nth-child(1) {
+.nav .menu i:nth-child(1) {
   color: #1AE51A
 }
-#programmer .nav .menu i:nth-child(2) {
+.nav .menu i:nth-child(2) {
   color: #E70033
 }
-#programmer .nav .menu i:nth-child(3) {
+.nav .menu i:nth-child(3) {
   color: #FF982B
+}
+.nav .menu img {
+  width: 40px;
+  height: 40px;
 }
 
 #graphic {
@@ -133,10 +137,29 @@ button:focus-visible {
   min-width: max-content;
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
-#canvas {
+#canvas svg {
   width: 100%;
+  max-width: 100%;
+  max-height: 750px;
+}
+
+#canvas svg path {
+  stroke-dashoffset: var(--path-len);
+}
+#canvas svg.drawing path {
+  animation: draw var(--anim-dur) linear forwards;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: var(--path-len);
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 code {

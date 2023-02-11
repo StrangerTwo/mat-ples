@@ -1,6 +1,9 @@
 // vite.config.js
+import svgLoader from 'vite-svg-loader'
+
 export default {
     build: {
-        target: 'esnext'
-    }
+        target: 'esnext',
+    },
+    plugins: [svgLoader()]
 }

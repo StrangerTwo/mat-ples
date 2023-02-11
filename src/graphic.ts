@@ -1,10 +1,17 @@
-import rytirObrys from "./images/rytir-obrys.svg";
+import tuzkaSvg from "./images/drawing/tuzka.svg?raw";
 
 const graphicCanvas = document.querySelector("#canvas");
 if (!graphicCanvas) throw new Error("x");
 
-export const initProps = () => {
-    // graphicCanvas.innerHTML = `<img src="${rytirObrys}" class="logo vanilla" alt="TypeScript logo" />`;
+const drawElement = (svg: string, duration: number) => {
+    graphicCanvas.innerHTML = svg;
+    
+    const svgElem = graphicCanvas.querySelector("svg");
+    svgElem?.style.setProperty("--anim-dur", `${duration}ms`);
+
+    svgElem?.classList.add("drawing");
 }
 
-export default initProps;
+export const drawTuzka = (duration: number) => {
+    drawElement(tuzkaSvg, duration);
+}
