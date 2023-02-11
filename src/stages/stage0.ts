@@ -1,0 +1,55 @@
+import { clearCanvas, drawMrkev } from "../graphic";
+import useLayout from "../layout";
+import write, { clearCode, setSpeed } from "../programmer";
+import sleep from "../sleep";
+import { clearTeleport, teleportGraphic, teleportProgrammer } from "../teleport";
+
+const {setProgrammerWidth, setGraphicWidth} = useLayout();
+
+const stage0 = async () => {
+    setGraphicWidth("15vw");
+    setProgrammerWidth("35vw");
+    setSpeed(20);
+
+    await write({v: "Scanner ", c: "class"}, {v: "scanner", c: "prop"}, {v: " = "}, {v: "new "}, {v: "Scanner", c: "class"}, {v: "("}, {v: "System", c: "class"}, {v: "."}, {v: "in", c: "prop"}, {v: ");"});
+    await write()
+
+    await write({v: "System", c: "class"}, {v: ".out."}, {v: "println", c: "prop"}, {v: '('}, {v: '"Zadej jméno"', c: "str"}, {v: ');'});
+    await write({v: "String ", c: "class"}, {v: "jmeno", c: "prop"}, {v: " = "}, {v: "scanner", c: "prop"}, {v: ".nextLine();"});
+    await write()
+
+    await write({v: "System", c: "class"}, {v: ".out."}, {v: "println", c: "prop"}, {v: '('}, {v: '"Zadej příjmení"', c: "str"}, {v: ");"});
+    await write({v: "String ", c: "class"}, {v: "prijmeni", c: "prop"}, {v: " = "}, {v: "scanner.nextLine();"});
+    await write()
+
+    await write({v: "String ", c: "class"}, {v: "celeJmeno", c: "prop"}, {v: " = "}, {v: "jmeno", c: "prop"}, {v: ' + '}, {v: '" "', c: "str"}, {v: ' + '}, {v: 'prijmeni', c: "prop"}, {v: ";"});
+    await write()
+
+    await write({v: "System", c: "class"}, {v: ".out.println"}, {v: '('}, {v: '"Ahoj "', c: "str"}, {v: " + "}, {v: "celeJmeno", c: "prop"}, {v: " + "}, {v: '" !"', c: "str"}, {v: ");"});
+
+    await sleep(2000);
+
+    teleportProgrammer();
+    await sleep(500);
+
+    clearCode();
+    clearTeleport();
+
+    setProgrammerWidth("20vw");
+
+    await sleep(1000);
+
+    setGraphicWidth("40vw");
+    await sleep(500);
+
+    drawMrkev(3500);
+    await sleep(5000);
+
+    teleportGraphic();
+    await sleep(500);
+
+    clearCanvas();
+    clearTeleport();
+}
+
+export default stage0;

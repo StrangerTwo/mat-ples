@@ -1,4 +1,4 @@
-import tuzkaSvg from "./images/drawing/tuzka.svg?raw";
+import mrkevDrawSvg from "./images/drawing/tuzka.svg?raw";
 
 const graphicCanvas = document.querySelector("#canvas");
 if (!graphicCanvas) throw new Error("x");
@@ -12,6 +12,10 @@ const drawElement = (svg: string, duration: number) => {
     svgElem?.classList.add("drawing");
 }
 
-export const drawTuzka = (duration: number) => {
-    drawElement(tuzkaSvg, duration);
+export const drawMrkev = (duration: number) => {
+    drawElement(mrkevDrawSvg, duration);
+}
+
+export const clearCanvas = () => {
+    graphicCanvas.innerHTML = "";
 }
