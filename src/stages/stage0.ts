@@ -7,8 +7,8 @@ import { clearTeleport, teleportGraphic, teleportProgrammer } from "../teleport"
 const {setProgrammerWidth, setGraphicWidth} = useLayout();
 
 const stage0 = async () => {
-    setGraphicWidth("0vw");
-    setProgrammerWidth("55vw");
+    setGraphicWidth("0vw", 0);
+    setProgrammerWidth("55vw", 800);
     setSpeed(20);
 
     await sleep(1000);
@@ -37,11 +37,11 @@ const stage0 = async () => {
     clearCode();
     clearTeleport();
 
-    setProgrammerWidth("0vw");
+    setProgrammerWidth("0vw", 300);
 
     await sleep(1000);
 
-    setGraphicWidth("40vw");
+    setGraphicWidth("40vw", 300);
     await sleep(500);
 
     drawTuzka(3500);
