@@ -1,11 +1,10 @@
-import { addToBattlefied, dropSpears, removeFromBattleField } from "../battlefield";
-import { clearCanvas, drawRoh, drawUsi } from "../graphic";
+import { addToBattlefied, removeFromBattleField } from "../battlefield";
 import useLayout from "../layout";
 import write, { clearCode, setSpeed } from "../programmer";
 import sleep from "../sleep";
-import { clearTeleport, teleportGraphic, teleportProgrammer } from "../teleport";
+import { clearTeleport, teleportProgrammer } from "../teleport";
 
-const {setProgrammerWidth, setGraphicWidth} = useLayout();
+const {setProgrammerWidth} = useLayout();
 
 const stage4 = async () => {
 
