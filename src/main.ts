@@ -7,9 +7,9 @@ import stage4 from './stages/stage4';
 import './style.css'
 
 async function play() {
-    // await stage0();
+    await stage0();
 
-    // await sleep(1000);
+    await sleep(1000);
 
     await stage1();
 
