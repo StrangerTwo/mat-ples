@@ -1,4 +1,4 @@
-import { clearCanvas, drawMrkev } from "../graphic";
+import { clearCanvas, drawTuzka } from "../graphic";
 import useLayout from "../layout";
 import write, { clearCode, setSpeed } from "../programmer";
 import sleep from "../sleep";
@@ -8,7 +8,7 @@ const {setProgrammerWidth, setGraphicWidth} = useLayout();
 
 const stage0 = async () => {
     setGraphicWidth("0vw");
-    setProgrammerWidth("35vw");
+    setProgrammerWidth("55vw");
     setSpeed(20);
 
     await sleep(1000);
@@ -37,14 +37,14 @@ const stage0 = async () => {
     clearCode();
     clearTeleport();
 
-    setProgrammerWidth("20vw");
+    setProgrammerWidth("0vw");
 
     await sleep(1000);
 
     setGraphicWidth("40vw");
     await sleep(500);
 
-    drawMrkev(3500);
+    drawTuzka(3500);
     await sleep(5000);
 
     teleportGraphic();

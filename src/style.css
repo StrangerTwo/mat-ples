@@ -86,6 +86,7 @@ button:focus-visible {
 :root {
   --programmer-width: 0vw;
   --graphic-width: 0vw;
+  --editor-speed: 1s
 }
 
 #battlefield {
@@ -93,6 +94,9 @@ button:focus-visible {
   position: relative;
   border-width: 0 2px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #programmer {
@@ -135,7 +139,7 @@ button:focus-visible {
 }
 
 #programmer, #graphic {
-  transition: width 300ms ease-out;
+  transition: width var(--editor-speed) ease-out;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -152,7 +156,6 @@ button:focus-visible {
   fill: none;
   stroke: #1d1d1b;
   stroke-dasharray: var(--path-len);
-  stroke-width: 40;
   stroke-linejoin: round;
   stroke-linecap: round;
   stroke-dashoffset: var(--path-len);
@@ -172,6 +175,8 @@ button:focus-visible {
 
 code {
   counter-reset: section;
+  font-size: 38px;
+  line-height: 2;
 }
 
 code p::before {
@@ -185,7 +190,7 @@ code p::before {
 }
 
 code span.class {
-  color: #258100;
+  color: #36ac08;
 }
 code span.method {
   color: #73c991;
@@ -206,10 +211,13 @@ code span.str {
 code span.key {
   color: #569cd6;
 }
+code span.purple {
+  color: #a211c7;
+}
 
 .teleportable.teleporting {
   transform-origin: center center;
-  transition: 300ms ease-in;
+  transition: 500ms ease-in;
   transition-property: transform;
   transform: scale(0) rotate(270deg);
 }
@@ -246,9 +254,38 @@ code span.key {
   }
 }
 
-svg#ground {
+#battlefield > svg#ground {
   height: 100%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+#battle {
+  position: relative;
+  z-index: 1;
+}
+#battle > svg {
+  position: absolute;
+  opacity: 0;
+}
+#battle > svg.show {
+  opacity: 1;
+}
+
+#knight_prog_1 .spear {
+  transform-origin: 32% 56%;
+}
+#knight_prog_1.drop .spear {
+  transform: rotate(57deg);
+}
+
+#knight_graf_1 .spear {
+  transform-origin: 66% 57%;
+}
+#knight_graf_1.drop .spear {
+  transform: rotate(-69deg);
+}
+
+#knight_prog_1 .spear, #knight_graf_1 .spear {
+  transition: transform 500ms cubic-bezier(1,0,.75,1);
 }

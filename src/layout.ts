@@ -13,11 +13,13 @@ export const shake = async () => {
 
 const useLayout = () => {
 
-    const setProgrammerWidth = (width: string) => {
+    const setProgrammerWidth = (width: string, speed: number) => {
+        root.style.setProperty("--editor-speed", `${speed}ms`)
         root.style.setProperty("--programmer-width", width)
     }
 
-    const setGraphicWidth = (width: string) => {
+    const setGraphicWidth = (width: string, speed: number) => {
+        root.style.setProperty("--editor-speed", `${speed}ms`)
         root.style.setProperty("--graphic-width", width)
     }
 
