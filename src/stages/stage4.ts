@@ -56,11 +56,9 @@ const stage4 = async () => {
     await write({v: "duck", c: "prop"}, {v: "."}, {v: " size", c: "prop"}, {v: " = "}, {v: "80 px", c: "prop"});
     await write();
     await write({v: "Spear", c: "class"}, {v: " spear", c: "prop"}, {v: " = "}, {v: "select", c: "method"}, {v: "("}, {v: "#Grafik .spear", c: "str"}, {v: ");"});
-    await write();
     await write({v: "spear", c: "prop"}, {v: "."}, {v: "replace", c: "method"}, {v: "("}, {v: "new", c: "key"}, {v: " Hračka", c: "class"}, {v: "());"});
     await write();
     await write({v: "Shield", c: "class"}, {v: " shield", c: "prop"}, {v: " = "}, {v: "select", c: "method"}, {v: "("}, {v: "#Grafik .shield", c: "str"}, {v: ");"});
-    await write();
     await write({v: "shield", c: "prop"}, {v: "."}, {v: "replace", c: "method"}, {v: "("}, {v: "new", c: "key"}, {v: " Ručník", c: "class"}, {v: "());"});
     setSpeed(40);
 

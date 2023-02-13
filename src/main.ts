@@ -4,6 +4,7 @@ import stage1 from './stages/stage1';
 import stage2 from './stages/stage2';
 import stage3 from './stages/stage3';
 import stage4 from './stages/stage4';
+import stage5 from './stages/stage5';
 import './style.css'
 
 async function play() {
@@ -24,6 +25,10 @@ async function play() {
     await sleep(1000);
 
     await stage4();
+
+    await sleep(1000);
+
+    await stage5();
 }
 
 document.getElementById("play")?.addEventListener('click', (e) => {
