@@ -293,11 +293,9 @@ code span.purple {
 
 #knight_prog_3 .sword {
   transform-origin: 20% 49%;
-  transform: rotate(var(--sword-angle));
 }
 #knight_graf_4 .sword {
   transform-origin: 80% 50%;
-  transform: rotate(var(--sword-angle));
 }
 
 #battlefield.zoomed {
@@ -339,18 +337,131 @@ code span.purple {
   }
 }
 
-#knight_prog_3, #knight_graf_4 {
-  --sword-angle: 0deg;
-}
-#battlefield.fight #knight_prog_3 {
-  animation: fightProg 10s ease-out forwards;
-}
 #battlefield.fight #knight_graf_4 {
-  animation: fightGraf 10s ease-out forwards;
+  animation: fightGraf 6s linear forwards;
 }
 
-@keyframes fightProg {
+#battlefield.fight #knight_prog_3 .sword {
+  animation: fightProgSword 6s linear forwards;
+}
+#battlefield.fight #knight_graf_4 .sword {
+  animation: fightGrafSword 6s linear forwards;
+}
+
+@keyframes fightGraf {
   0% {
-    
+    z-index: 0;
+    left: -100px;
+    bottom: -230px;
+  }
+  8% {
+    z-index: 1;
+  }
+  20% {
+    z-index: 0;
+  }
+  45% {
+    z-index: 1;
+  }
+  53% {
+    z-index: 0;
+  }
+  70% {
+    z-index: 1;
+  }
+  74% {
+    z-index: 0;
+  }
+  93% {
+    z-index: 1;
+  }
+  100% {
+    z-index: 1;
+    left: -100px;
+    bottom: -230px;
+  }
+}
+
+@keyframes fightProgSword {
+  0% {
+    transform: rotate(0deg);
+  }
+  8% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  34% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(-10deg);
+  }
+  53% {
+    transform: rotate(3deg);
+  }
+  62% {
+    transform: rotate(-12deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  74% {
+    transform: rotate(8deg);
+  }
+  84% {
+    transform: rotate(-6deg);
+  }
+  93% {
+    transform: rotate(-12deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fightGrafSword {
+  0% {
+    transform: rotate(0deg);
+  }
+  8% {
+    transform: rotate(-6deg);
+  }
+  20% {
+    transform: rotate(5deg);
+  }
+  34% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(-10deg);
+  }
+  53% {
+    transform: rotate(8deg);
+  }
+  62% {
+    transform: rotate(-6deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  74% {
+    transform: rotate(12deg);
+  }
+  84% {
+    transform: rotate(2deg);
+  }
+  93% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

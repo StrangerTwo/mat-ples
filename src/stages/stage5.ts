@@ -1,4 +1,4 @@
-import { addToBattlefied, jumpIn, removeFromBattleField, zoomIn } from "../battlefield";
+import { addToBattlefied, fight, jumpIn, removeFromBattleField, zoomIn } from "../battlefield";
 import { clearCanvas, drawBoty, drawMrkev, drawRucnik } from "../graphic";
 import useLayout from "../layout";
 import sleep from "../sleep";
@@ -63,6 +63,9 @@ const stage5 = async () => {
 
     jumpIn();
     await sleep(1000);
+
+    fight();
+    await sleep(11000);
 }
 
 export default stage5;

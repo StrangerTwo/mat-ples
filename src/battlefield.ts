@@ -84,3 +84,7 @@ export const zoomIn = () => {
 export const jumpIn = () => {
     battlefieldEl.classList.add("jump");
 }
+
+export const fight = () => {
+    battlefieldEl.classList.add("fight");
+}
