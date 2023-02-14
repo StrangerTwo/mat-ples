@@ -97,6 +97,7 @@ button:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 600ms ease-in-out;
 }
 
 #programmer {
@@ -288,4 +289,68 @@ code span.purple {
 
 #knight_prog_1 .spear, #knight_graf_1 .spear {
   transition: transform 500ms cubic-bezier(1,0,.75,1);
+}
+
+#knight_prog_3 .sword {
+  transform-origin: 20% 49%;
+  transform: rotate(var(--sword-angle));
+}
+#knight_graf_4 .sword {
+  transform-origin: 80% 50%;
+  transform: rotate(var(--sword-angle));
+}
+
+#battlefield.zoomed {
+  transform: scale(1.5);
+}
+
+#battlefield.jump #knight_prog_3 {
+  animation: jumpProg 500ms ease-out forwards;
+}
+#battlefield.jump #knight_graf_4 {
+  animation: jumpGraf 500ms ease-out forwards;
+}
+@keyframes jumpProg {
+  0% {
+    right: 75px;
+    bottom: -235px;
+  }
+  40% {
+    right: 50px;
+    bottom: -165px;
+  }
+  100% {
+    right: -25px;
+    bottom: -235px;
+  }
+}
+@keyframes jumpGraf {
+  0% {
+    left: 0;
+    bottom: -230px;
+  }
+  40% {
+    right: -25px;
+    bottom: -160px;
+  }
+  100% {
+    left: -100px;
+    bottom: -230px;
+  }
+}
+
+#knight_prog_3, #knight_graf_4 {
+  --sword-angle: 0deg;
+}
+#battlefield.fight #knight_prog_3 {
+  animation: fightProg 10s ease-out forwards;
+}
+#battlefield.fight #knight_graf_4 {
+  animation: fightGraf 10s ease-out forwards;
+}
+
+@keyframes fightProg {
+  0% {
+    
+  }
 }

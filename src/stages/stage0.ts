@@ -1,5 +1,5 @@
 import { clearCanvas, drawTuzka } from "../graphic";
-import useLayout from "../layout";
+import useLayout, { shake } from "../layout";
 import write, { clearCode, setSpeed } from "../programmer";
 import sleep from "../sleep";
 import { clearTeleport, teleportGraphic, teleportProgrammer } from "../teleport";
@@ -52,6 +52,10 @@ const stage0 = async () => {
 
     clearCanvas();
     clearTeleport();
+
+    await sleep(500);
+
+    setGraphicWidth("0vw", 0);
 }
 
 export default stage0;

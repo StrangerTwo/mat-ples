@@ -76,3 +76,11 @@ export const dropSpears = () => {
     document.getElementById("knight_prog_1")?.classList.add("drop");
     document.getElementById("knight_graf_1")?.classList.add("drop");
 }
+
+export const zoomIn = () => {
+    battlefieldEl.classList.add("zoomed")
+}
+
+export const jumpIn = () => {
+    battlefieldEl.classList.add("jump");
+}

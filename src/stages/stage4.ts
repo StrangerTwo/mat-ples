@@ -53,7 +53,7 @@ const stage4 = async () => {
     await sleep(1500);
 
     setSpeed(32);
-    await write({v: "duck", c: "prop"}, {v: "."}, {v: " size", c: "prop"}, {v: " = "}, {v: "80 px", c: "prop"});
+    await write({v: "duck", c: "prop"}, {v: "."}, {v: "size", c: "prop"}, {v: " = "}, {v: '"80 px"', c: "str"});
     await write();
     await write({v: "Spear", c: "class"}, {v: " spear", c: "prop"}, {v: " = "}, {v: "select", c: "method"}, {v: "("}, {v: "#Grafik .spear", c: "str"}, {v: ");"});
     await write({v: "spear", c: "prop"}, {v: "."}, {v: "replace", c: "method"}, {v: "("}, {v: "new", c: "key"}, {v: " Hračka", c: "class"}, {v: "());"});

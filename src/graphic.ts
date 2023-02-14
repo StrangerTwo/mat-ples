@@ -4,6 +4,7 @@ import rytirDrawSvg from "./images/drawing/knight.svg?raw";
 import usiDrawSvg from "./images/drawing/usi.svg?raw";
 import rohDrawSvg from "./images/drawing/roh.svg?raw";
 import botyDrawSvg from "./images/drawing/boty.svg?raw";
+import rucnikDrawSvg from "./images/drawing/rucnik.svg?raw";
 
 const graphicCanvas = document.querySelector("#canvas");
 if (!graphicCanvas) throw new Error("x");
@@ -39,6 +40,10 @@ export const drawRoh = (duration: number) => {
 
 export const drawBoty = (duration: number) => {
     drawElement(botyDrawSvg, duration);
+}
+
+export const drawRucnik = (duration: number) => {
+    drawElement(rucnikDrawSvg, duration);
 }
 
 export const clearCanvas = () => {
