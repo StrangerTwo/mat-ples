@@ -1,5 +1,5 @@
 import sleep from './sleep';
-import stage0 from './stages/stage0';
+// import stage0 from './stages/stage0';
 import stage1 from './stages/stage1';
 import stage2 from './stages/stage2';
 import stage3 from './stages/stage3';
@@ -8,9 +8,9 @@ import stage5 from './stages/stage5';
 import './style.css'
 
 async function play() {
-    await stage0();
+    // await stage0();
 
-    await sleep(1000);
+    // await sleep(1000);
 
     await stage1();
 
