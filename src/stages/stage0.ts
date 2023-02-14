@@ -1,5 +1,5 @@
 import { clearCanvas, drawTuzka } from "../graphic";
-import useLayout, { shake } from "../layout";
+import useLayout from "../layout";
 import write, { clearCode, setSpeed } from "../programmer";
 import sleep from "../sleep";
 import { clearTeleport, teleportGraphic, teleportProgrammer } from "../teleport";
