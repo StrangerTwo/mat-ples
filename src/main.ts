@@ -1,4 +1,3 @@
-import initBattlefield from './battlefield';
 import sleep from './sleep';
 // import stage0 from './stages/stage0';
 import stage1 from './stages/stage1';
