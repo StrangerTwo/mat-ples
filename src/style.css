@@ -469,3 +469,59 @@ code span.purple {
     transform: rotate(0deg);
   }
 }
+
+#battlefield.fightend #knight_prog3 {
+  right: -25px;
+  bottom: -235px;
+}
+#battlefield.fightend #knight_graf_4 {
+  left: -100px;
+  bottom: -230px;
+}
+
+
+#water-back {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -150px);
+  animation: wave ease-in-out 8s infinite;
+}
+#water-front {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100px);
+  animation: wave2 ease-in-out 6s infinite;
+  z-index: 5;
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(-50%, -120px);
+  }
+  25% {
+    transform: translate(-45%, -80px);
+  }
+  65% {
+    transform: translate(-55%, -130px);
+  }
+  100% {
+    transform: translate(-50%, -120px);
+  }
+}
+
+@keyframes wave2 {
+  0% {
+    transform: translate(-50%, -100px);
+  }
+  25% {
+    transform: translate(-55%, -130px);
+  }
+  65% {
+    transform: translate(-45%, -80px);
+  }
+  100% {
+    transform: translate(-50%, -100px);
+  }
+}

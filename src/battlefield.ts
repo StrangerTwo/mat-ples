@@ -3,6 +3,8 @@ import groundSkySvg from "./images/ground_sky.svg?raw"
 import groundDetailSkySvg from "./images/groundx_sky.svg?raw"
 import groundTentSvg from "./images/ground_tent.svg?raw"
 import groundTentCloudSvg from "./images/ground_tent_cloud.svg?raw"
+import groundWaterBackSvg from "./images/ground_water_back.svg?raw"
+import groundWaterFrontSvg from "./images/ground_water_front.svg?raw"
 import sleep from "./sleep";
 
 const battlefieldEl = document.getElementById("battlefield");
@@ -35,6 +37,13 @@ const initBattlefield = async () => {
 
     remove();
     battlefieldEl.innerHTML += groundTentCloudSvg;
+    await sleep(300);
+}
+
+export const floodBattlefield = async () => {
+    remove();
+    battlefieldEl.innerHTML += groundWaterBackSvg;
+    battlefieldEl.innerHTML += groundWaterFrontSvg;
     await sleep(300);
 }
 
@@ -87,4 +96,9 @@ export const jumpIn = () => {
 
 export const fight = () => {
     battlefieldEl.classList.add("fight");
+    setTimeout(() => {
+        battlefieldEl.classList.remove("fight");
+        battlefieldEl.classList.remove("jump");
+        battlefieldEl.classList.add("fightend");
+    }, 8000);
 }

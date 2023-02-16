@@ -1,3 +1,4 @@
+import initBattlefield from './battlefield';
 import sleep from './sleep';
 // import stage0 from './stages/stage0';
 import stage1 from './stages/stage1';
@@ -12,17 +13,19 @@ async function play() {
 
     // await sleep(1000);
 
-    await stage1();
+    // await stage1();
 
-    await sleep(1000);
+    // await sleep(1000);
 
-    await stage2();
+    // await stage2();
 
-    await sleep(1000);
+    // await sleep(1000);
 
-    await stage3();
+    // await stage3();
 
-    await sleep(1000);
+    // await sleep(1000);
+
+    initBattlefield()
 
     await stage4();
 
