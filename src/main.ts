@@ -13,19 +13,17 @@ async function play() {
 
     // await sleep(1000);
 
-    // await stage1();
+    await stage1();
 
-    // await sleep(1000);
+    await sleep(1000);
 
-    // await stage2();
+    await stage2();
 
-    // await sleep(1000);
+    await sleep(1000);
 
-    // await stage3();
+    await stage3();
 
-    // await sleep(1000);
-
-    initBattlefield()
+    await sleep(1000);
 
     await stage4();
 
