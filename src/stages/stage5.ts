@@ -1,4 +1,4 @@
-import { addToBattlefied, fight, floodBattlefield, jumpIn, removeFromBattleField, zoomIn } from "../battlefield";
+import { addToBattlefied, fight, floodBattlefield, jumpIn, removeFromBattleField, zoomIn, zoomOut } from "../battlefield";
 import { clearCanvas, drawBoty, drawMrkev, drawRucnik } from "../graphic";
 import useLayout from "../layout";
 import sleep from "../sleep";
@@ -67,11 +67,14 @@ const stage5 = async () => {
     fight();
     await sleep(8000);
 
+    zoomOut();
+    await sleep(1000);
+
     setGraphicWidth("40vw", 800);
     await sleep(1000);
 
     // GRAFIK VODA //
-    // drawVoda(2000);
+    drawRucnik(1500);
     await sleep(2000);
 
     teleportGraphic();

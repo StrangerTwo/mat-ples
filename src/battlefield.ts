@@ -45,6 +45,13 @@ export const floodBattlefield = async () => {
     battlefieldEl.innerHTML += groundWaterBackSvg;
     battlefieldEl.innerHTML += groundWaterFrontSvg;
     battlefieldEl.classList.add('flood');
+    setTimeout(() => {
+        const x = document.getElementById('knight_prog_3');
+        if (!x) throw new Error('x');
+
+        x.style.bottom = "";
+        battlefieldEl.classList.add('flooding');
+    }, 2000);
     await sleep(300);
 }
 
@@ -89,6 +96,10 @@ export const dropSpears = () => {
 
 export const zoomIn = () => {
     battlefieldEl.classList.add("zoomed")
+}
+
+export const zoomOut = () => {
+    battlefieldEl.classList.remove("zoomed")
 }
 
 export const jumpIn = () => {
