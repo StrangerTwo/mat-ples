@@ -485,46 +485,46 @@ code span.purple {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0) scale(1.05);
-  /* animation: wave ease-in-out 8s infinite; */
+  animation: wave ease-in-out 8s infinite;
 }
 #water-front {
   height: 100%;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0) scale(1.05);
-  /* animation: wave2 ease-in-out 6s infinite; */
+  animation: wave2 ease-in-out 6s infinite;
   z-index: 5;
 }
 
-/* @keyframes wave {
+@keyframes wave {
   0% {
-    transform: translate(-50%, -120px);
+    transform: translate(-50%, -10px) scale(1.05);
   }
   25% {
-    transform: translate(-45%, -80px);
+    transform: translate(-50%, 10px) scale(1.05);
   }
   65% {
-    transform: translate(-55%, -130px);
+    transform: translate(-50%, 20px) scale(1.05);
   }
   100% {
-    transform: translate(-50%, -120px);
+    transform: translate(-50%, -10px) scale(1.05);
   }
 }
 
 @keyframes wave2 {
   0% {
-    transform: translate(-50%, -100px);
+    transform: translate(-50%, 10px) scale(1.05);
   }
   25% {
-    transform: translate(-55%, -130px);
+    transform: translate(-50%, -10px) scale(1.05);
   }
   65% {
-    transform: translate(-45%, -80px);
+    transform: translate(-50%, -20px) scale(1.05);
   }
   100% {
-    transform: translate(-50%, -100px);
+    transform: translate(-50%, 10px) scale(1.05);
   }
-} */
+}
 
 
 
@@ -538,7 +538,7 @@ code span.purple {
 }
 #battlefield.flood #knight_graf_4 {
   left: -100px !important;
-  bottom: -440px !important;
+  bottom: -445px !important;
 }
 
 @keyframes fall {
