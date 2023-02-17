@@ -44,6 +44,7 @@ export const floodBattlefield = async () => {
     remove();
     battlefieldEl.innerHTML += groundWaterBackSvg;
     battlefieldEl.innerHTML += groundWaterFrontSvg;
+    battlefieldEl.classList.add('flood');
     await sleep(300);
 }
 
