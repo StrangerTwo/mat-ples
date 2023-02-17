@@ -1,5 +1,5 @@
 import { addToBattlefied, fight, floodBattlefield, jumpIn, removeFromBattleField, zoomIn, zoomOut } from "../battlefield";
-import { clearCanvas, drawBoty, drawMrkev, drawRucnik } from "../graphic";
+import { clearCanvas, drawBoty, drawMrkev, drawRucnik, drawVlna } from "../graphic";
 import useLayout from "../layout";
 import sleep from "../sleep";
 import { clearTeleport, teleportGraphic } from "../teleport";
@@ -74,7 +74,7 @@ const stage5 = async () => {
     await sleep(1000);
 
     // GRAFIK VODA //
-    drawRucnik(1500);
+    drawVlna(1500);
     await sleep(2000);
 
     teleportGraphic();
